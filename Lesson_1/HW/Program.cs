@@ -6,9 +6,9 @@ Console.WriteLine("Введите Ваше второе число");
 int b = int.Parse(Console.ReadLine()!);
 if (a > b)
 {
-    Console.WriteLine(  $"{a} max");
+    Console.WriteLine( $"{a} max");
 }
 else
 {
- Console.WriteLine(  $"{b} max");   
+ Console.WriteLine($"{b} max");   
 }
