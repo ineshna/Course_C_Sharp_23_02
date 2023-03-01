@@ -4,28 +4,17 @@ Console.WriteLine("Введите Ваше второе число");
 int b = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите Ваше второе число");
 int c = int.Parse(Console.ReadLine()!);
+int maxnum = 0;
 if (a > b)
 {
-    a = Mnum;
+    maxnum = a;
 }
-else
+if (b > maxnum)
 {
-    b = Mnum;
+    maxnum = b;
 }
-if (b > c)
+if(c > maxnum)
 {
-    b = Mnum;
+    maxnum = c;
 }
-else
-{
-    c = Mnum;
-}
-if (c > a)
-{
-    c = Mnum;
-}
-else
-{
-    a = Mnum;
-}
-Console.WriteLine( $"{Mnum} max");
+Console.WriteLine($"{maxnum} = max "); 
