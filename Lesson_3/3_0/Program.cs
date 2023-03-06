@@ -18,3 +18,7 @@ void Quarters(int x, int y)
 int num_1 = int.Parse(Consolr.ReadLine()!);
 int num_2 = int.Parse(Consolr.ReadLine()!);
 Quarters(num_1,num_2);
+
+
+
+
