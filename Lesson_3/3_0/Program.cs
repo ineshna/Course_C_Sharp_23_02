@@ -1,7 +1,5 @@
 ﻿
 
-
-
 void Quarters(int x, int y)
 {
     if (x == 0 ||y == 0)
@@ -15,8 +13,8 @@ void Quarters(int x, int y)
     else if (x > 0 && y < 0)
         Console.WriteLine("IV");
 }
-int num_1 = int.Parse(Consolr.ReadLine()!);
-int num_2 = int.Parse(Consolr.ReadLine()!);
+int num_1 = int.Parse(Console.ReadLine()!);
+int num_2 = int.Parse(Console.ReadLine()!);
 Quarters(num_1,num_2);
 
 
