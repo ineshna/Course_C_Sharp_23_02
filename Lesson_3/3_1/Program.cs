@@ -1,16 +1,18 @@
 ﻿
-void Quarters(int num)
+void Quarters(int x, int y)
 {
-    if (num == 1)
-        Console.WriteLine("x > 0, y > 0");
-    else if (num == 2)
-        Console.WriteLine("x < 0, y > 0");
-    else if (num ==3)
-        Console.WriteLine("x < 0 ,y < 0");
-    else if (num == 4)
-        Console.WriteLine("x < 0 , y < 0");
-    else 
-        Console.WriteLine("error");
+    if (x ==0 || y ==0)
+        Console.WriteLine("x = 0, y = 0");
+    else if (x >0 && y > 0)
+        Console.WriteLine("I");
+    else if (x < 0 && y > 0)
+        Console.WriteLine("II");
+    else if (x < 0 && y < 0)
+        Console.WriteLine("III");
+     else if (x > 0 && y < 0)
+        Console.WriteLine("IV");
+  
 }
-int num = int.Parse(Console.ReadLine()!);
-Quarters(num);
+int num_1 = int.Parse(Console.ReadLine()!);
+int num_2 = int.Parse(Console.ReadLine()!);
+Quarters(num_1, num_2);
