@@ -14,4 +14,5 @@ int SumNum(int num)
 
 int A = int.Parse(Console.ReadLine()!);
 int result = SumNum(A);
+Console.Write("itogo : ");
 Console.WriteLine(result);
