@@ -1,5 +1,8 @@
 ﻿// 1. Напишите программу замена элементов массива:
-//    положительные элементы замените на соответствующие отрицательные, и наоборот.int[] InputRandomMassive(int lengthMas, int minRangeMas, int maxRangeMas)
+//    положительные элементы замените на соответствующие отрицательные,
+// и наоборот.
+ 
+ int[] InputRandomMassive(int lengthMas, int minRangeMas, int maxRangeMas)
 {
     int[] masRandom = new int[lengthMas]; // Задаем массив
     for (int i = 0; i < lengthMas; i++)
