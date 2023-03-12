@@ -32,20 +32,45 @@ void PrintArray(int[] col)
         position++;
     }
 }
-int EvenIndex(int[] array, int num)
+int MaxNum(int[] array, int num)
 {
-    int sumindex = 0;
-    for(int i = 0; i < size; i = i+2)
+    int max = array[0];
+    for(int i = 0; i < size; i++)
+    {
+        if (array[i] > max)
+        {
+            max = array[i];
+        }
+    }
         
-        sumindex += array[i];
-    
-    return sumindex;
+    return max;
+
+}
+
+int MinNum(int[] array, int num)
+{
+    int min = array[0];
+    for(int i = 0; i < size; i++)
+    {
+        if (array[i] < min)
+        {
+            min = array[i];
+        }
+    }
+        
+    return min;
 
 }
 int[] array =  new int[size];
 FillArray(array);
 PrintArray(array);
-EvenIndex(array, size);
-int result = EvenIndex(array, size);
+MaxNum(array, size);
+int resultmax = MaxNum(array, size);
 Console.WriteLine();
-Console.Write($"Cумма элементов на нечетных позициях равна {result} ");
+Console.WriteLine($"максимум равен {resultmax} ");
+MinNum(array, size);
+int resultmin = MinNum(array, size);
+Console.WriteLine();
+Console.WriteLine($"минимум равен {resultmin} ");
+Console.WriteLine();
+Console.WriteLine($"сумма максимума и минимума равна {resultmin +resultmax } ");
