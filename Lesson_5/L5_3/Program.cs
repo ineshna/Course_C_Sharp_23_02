@@ -1,5 +1,6 @@
 ﻿// 3. Задайте одномерный массив из 123 случайных чисел.
-//    Найдите количество элементов массива, значения которых лежат в отрезке [10,99].
+//    Найдите количество элементов массива, значения которых лежат 
+//в отрезке [10,99].
 void Print(int[] arr)
 {
     int size = arr.Length;
@@ -17,12 +18,27 @@ int[] MassNums(int size, int from, int to)
         arr[i] = new Random().Next(from, to);
     return arr;
 }
-int RetNum(int[] Mass)
-
+int RetNum(int[] Mass, int from, int to )
 {
     int count = 0;
-    for(int i =0;i< Mass.Length; i++)
+    for(int i = 0; i < Mass.Length; i++)
     {
-        if 
+        if(Mass[i]>=from  &  Mass[i]<= to)
+        count = count +1;
     }
+    return count;
 }
+
+int num = int.Parse(Console.ReadLine()!);
+int start = int.Parse(Console.ReadLine()!);
+int stop = int.Parse(Console.ReadLine()!);
+
+int[] mass = MassNums(num, start, stop);
+Print(mass);
+
+
+int first= int.Parse(Console.ReadLine()!);
+int second = int.Parse(Console.ReadLine()!);
+
+int resultt = RetNum(mass, first, second);
+Console.WriteLine(resultt );
