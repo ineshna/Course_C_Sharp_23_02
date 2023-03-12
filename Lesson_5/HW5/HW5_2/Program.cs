@@ -15,7 +15,7 @@ void FillArray(int[]collection)
     int index= 0;
     while(index < length)
     {
-        collection[index] = new Random().Next(100, 1000);
+        collection[index] = new Random().Next(1,10);
         index++;
     }
 
@@ -32,20 +32,20 @@ void PrintArray(int[] col)
         position++;
     }
 }
-int EvenPart(int[] array, int num)
+int EvenIndex(int[] array, int num)
 {
-    int alleven = 0;
-    for(int i = 0; i < size; i++)
-    {if (array[i] %2 == 0)
-        alleven = alleven +1;
-    }
-    return alleven;
+    int sumindex = 0;
+    for(int i = 0; i < size; i = i+2)
+        
+        sumindex += array[i];
+    
+    return sumindex;
 
 }
 int[] array =  new int[size];
 FillArray(array);
 PrintArray(array);
-EvenPart(array, size);
-int result = EvenPart(array, size);
+EvenIndex(array, size);
+int result = EvenIndex(array, size);
 Console.WriteLine();
-Console.Write($"В заданном массиве  {result} четных чисел");
+Console.Write($"Cумма элементов на нечетных позициях равна {result} ");
