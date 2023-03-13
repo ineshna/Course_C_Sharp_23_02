@@ -9,20 +9,20 @@ int size = int.Parse(Console.ReadLine()!);
 //Console.Write("Введите максимальноезначение массива: ");
 //int end = int.Parse(Console.ReadLine()!);
 
-void FillArray(int[]collection)
+void FillArray(double[]collection)
 {
     int length = collection.Length;
     int index= 0;
     while(index < length)
     {
-        collection[index] = new Random().Next(1,10);
+        collection[index] = new Random (). NextDouble ( );
         index++;
     }
 
 
 }
 
-void PrintArray(int[] col)
+void PrintArray(double[] col)
 {
     int count = col.Length;
     int position = 0;
@@ -32,9 +32,9 @@ void PrintArray(int[] col)
         position++;
     }
 }
-int MaxNum(int[] array, int num)
+double MaxNum(double[] array, double num)
 {
-    int max = array[0];
+    double max = array[0];
     for(int i = 0; i < size; i++)
     {
         if (array[i] > max)
@@ -47,9 +47,9 @@ int MaxNum(int[] array, int num)
 
 }
 
-int MinNum(int[] array, int num)
+double MinNum(double[] array, double num)
 {
-    int min = array[0];
+    double min = array[0];
     for(int i = 0; i < size; i++)
     {
         if (array[i] < min)
@@ -61,15 +61,15 @@ int MinNum(int[] array, int num)
     return min;
 
 }
-int[] array =  new int[size];
+double[] array =  new double[size];
 FillArray(array);
 PrintArray(array);
 MaxNum(array, size);
-int resultmax = MaxNum(array, size);
+double resultmax = MaxNum(array, size);
 Console.WriteLine();
 Console.WriteLine($"максимум равен {resultmax} ");
 MinNum(array, size);
-int resultmin = MinNum(array, size);
+double resultmin = MinNum(array, size);
 Console.WriteLine();
 Console.WriteLine($"минимум равен {resultmin} ");
 Console.WriteLine();
