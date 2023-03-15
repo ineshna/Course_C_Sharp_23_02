@@ -13,20 +13,19 @@ void FillArray(int[] collection)
         index++;
     }
     int sum = 0;
- for(int i = 0; i < index; i++ )
-{
-    if (collection[i] > 0)
+    for (int i = 0; i < index; i++)
     {
-        sum ++;
-    }
-     //int result = sum;   
+        if (collection[i] > 0)
+        {
+            sum++;
+        }
 
+    }
+    int result = sum;
+    Console.Write("В массиве : ");
+    Console.Write(sum);
+    Console.WriteLine(" положительных чисел ");
 }
-int result = sum; 
-Console.Write("В массиве : ");
-Console.Write(sum);
-Console.WriteLine(" положительных чисел ");
-} 
 
 
 void PrintArray(int[] col)
@@ -34,7 +33,7 @@ void PrintArray(int[] col)
     int count = col.Length;
     int position = 0;
     while (position < count)
-    { 
+    {
         Console.WriteLine(col[position]);
         position++;
     }
@@ -42,8 +41,8 @@ void PrintArray(int[] col)
 
 
 
-int[]array = new int[10];
+int[] array = new int[10];
 FillArray(array);
-PrintArray(array); 
+PrintArray(array);
 Console.WriteLine();
 
