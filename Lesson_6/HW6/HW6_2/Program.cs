@@ -21,5 +21,5 @@ void Intersection( double k1, double b1, double k2, double b2 )
 double k_1 = double.Parse(Console.ReadLine()!);
 double k_2 = double.Parse(Console.ReadLine()!);
 double b_1 = double.Parse(Console.ReadLine()!);
-double d_2 = double.Parse(Console.ReadLine()!);
+double b_2 = double.Parse(Console.ReadLine()!);
 Intersection(k_1, b_1, k_2, b_2);
