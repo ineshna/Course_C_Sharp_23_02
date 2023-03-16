@@ -62,4 +62,4 @@ int count = 0;
 Console.Write("Сколько чисел введете? :");
 int a = int.Parse(Console.ReadLine()!);
 int  result = Check(a);
-Console.WriteLine("$Количество положительных числ :{result}")
+Console.WriteLine("$Количество положительных числ :{result}");
