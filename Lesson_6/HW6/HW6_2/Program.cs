@@ -5,7 +5,7 @@
 void Intersection( double k1, double b1, double k2, double b2 )
 {
     double k_sub = k2 - k1;
-    if (k_sb !=0)
+    if (k_sub !=0)
     {
         double x = (b2 - b1 ) / (k2 -k1);
         double y = k1 * x * b1;
