@@ -1,4 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// Напишите программу, которая на вход принимает позиции 
+//элемента в двумерном массиве, и возвращает значение этого
+// элемента или же указание, что такого элемента нет.
 
 Console.WriteLine("Hello, World!");
 	void Print(int[,] arr)
@@ -29,7 +31,7 @@ Console.WriteLine("Hello, World!");
     {
         int row = arr.GetLength(0);
 	    int column = arr.GetLength(1);
-		if (numi > arr[row,column]&& numj > arr[row,column])
+		if (numi > arr[row,column])
 		  Console.WriteLine("Такого числа нет");
 
     
