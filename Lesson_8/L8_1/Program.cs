@@ -1,5 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-
+﻿// Задайте двумерный массив. Введите элемент, и найдите первое его вхождение,
+//выведите позиции по горизонтали и вертикали, или напишите, что такого элемента нет.
 Console.WriteLine("Hello, World!");
 	void Print(int[,] arr)
 	{
@@ -14,7 +14,7 @@ Console.WriteLine("Hello, World!");
 	    }
         Console.WriteLine();
 	}
-	
+
 	int[,] MassNums(int row, int column, int from, int to)
 	{
 	    int[,] arr = new int[row, column];
@@ -25,20 +25,15 @@ Console.WriteLine("Hello, World!");
 	    return arr;
 	}
 
-    string SerchEl(int[,]arr, int numi, int numj)
+    void ReplaceIndex(int[,] array)
     {
-        int row = arr.GetLength(0);
-	    int column = arr.GetLength(1);
-		if (numi > arr[row,column]&& numj > arr[row,column])
-		  Console.WriteLine("Такого числа нет");
+        int ArrayRow = array.GetLength(0);
+        int ArrayColumn = array.GetLength(1);
 
-    
-        for (int i = 0; i < row; i++)
-	        for (int j = 0; j < column; j++)
-
-             if( arr[i-1,j-1] == numi && arr[i-1,j-1] == numj)
-              return $"на позиции [{numi}{numj}] стоит [{arr[i-1,j-1]}]";// если бы тут был consol,...то проверил все вхождения
-    return "Такого числа нет";   
+        for(int j = 0; j< ArrayColumn; j++)
+        {
+            (array[0,j], array[ArrayRow -1 ,j]) = ( array[ArrayRow -1 ,j], array[0,j]);
+        }
     }
 
 	
@@ -50,8 +45,13 @@ Console.WriteLine("Hello, World!");
 
 	int[,] mass = MassNums(row_num, column_num, start, stop);
     Print(mass);
-    int vali = int.Parse(Console.ReadLine()!);
-	int valj = int.Parse(Console.ReadLine()!);
+    Console.WriteLine();
+    ReplaceIndex(mass);
+    Print(mass);
 
-    string result = SerchEl(mass, vali, valj);
-    Console.WriteLine(result);
+   
+
+    
+
+
+

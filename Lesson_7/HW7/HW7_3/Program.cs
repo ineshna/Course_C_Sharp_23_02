@@ -1,4 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// Задайте двумерный массив из целых чисел. 
+//Найдите среднее арифметическое элементов в каждом столбце.
 
 Console.WriteLine("Hello, World!");
 	void Print(int[,] arr)
@@ -25,20 +26,19 @@ Console.WriteLine("Hello, World!");
 	    return arr;
 	}
 
-    string SerchEl(int[,]arr, int numi, int numj)
+    int AverSum (int[,]arr)
     {
         int row = arr.GetLength(0);
 	    int column = arr.GetLength(1);
-		if (numi > arr[row,column]&& numj > arr[row,column])
-		  Console.WriteLine("Такого числа нет");
 
-    
+        int sum = 0;
+
         for (int i = 0; i < row; i++)
 	        for (int j = 0; j < column; j++)
 
-             if( arr[i-1,j-1] == numi && arr[i-1,j-1] == numj)
-              return $"на позиции [{numi}{numj}] стоит [{arr[i-1,j-1]}]";// если бы тут был consol,...то проверил все вхождения
-    return "Такого числа нет";   
+             if( i==j)
+                sum = sum +arr[i,j];
+        return sum;    
     }
 
 	
@@ -47,11 +47,7 @@ Console.WriteLine("Hello, World!");
 	int start = int.Parse(Console.ReadLine()!);
 	int stop = int.Parse(Console.ReadLine()!);
 	
-
 	int[,] mass = MassNums(row_num, column_num, start, stop);
-    Print(mass);
-    int vali = int.Parse(Console.ReadLine()!);
-	int valj = int.Parse(Console.ReadLine()!);
-
-    string result = SerchEl(mass, vali, valj);
+	Print(mass);
+    int result = EvenPos(mass);
     Console.WriteLine(result);
