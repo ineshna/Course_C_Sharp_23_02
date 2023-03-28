@@ -5,7 +5,7 @@
 void Intersection( double k1, double b1, double k2, double b2 )
 {
     double k_sub = k2 - k1;
-    if (k_sb !=0)
+    if (k_sub !=0)
     {
         double x = (b2 - b1 ) / (k2 -k1);
         double y = k1 * x * b1;
@@ -21,5 +21,5 @@ void Intersection( double k1, double b1, double k2, double b2 )
 double k_1 = double.Parse(Console.ReadLine()!);
 double k_2 = double.Parse(Console.ReadLine()!);
 double b_1 = double.Parse(Console.ReadLine()!);
-double d_2 = double.Parse(Console.ReadLine()!);
+double b_2 = double.Parse(Console.ReadLine()!);
 Intersection(k_1, b_1, k_2, b_2);
