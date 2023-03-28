@@ -2,6 +2,7 @@
 //в двумерном массиве, и возвращает значение этого элемента или же
 //указание, что такого элемента нет
 
+Console.WriteLine("Hello, World!");
 	void Print(int[,] arr)
 	{
 	    int row = arr.GetLength(0);
@@ -15,7 +16,7 @@
 	    }
         Console.WriteLine();
 	}
-	
+	//запалнящий массив
 	int[,] MassNums(int row, int column, int from, int to)
 	{
 	    int[,] arr = new int[row, column];
@@ -25,15 +26,19 @@
 	            arr[i, j] = new Random().Next(from, to);
 	    return arr;
 	}
-    void EvenPos (int[,]arr)
+
+    string SerchEl (int[,]arr, int numi, int numj)
     {
         int row = arr.GetLength(0);
 	    int column = arr.GetLength(1);
+		if (numi > row-1 && numj >column-1)
 
-        for (int i = 1; i < row; i+=2)
-	        for (int j = 1; j < column; j+=2)
-	            arr[i, j] = arr[i, j] * arr[i, j];
+    
+        for (int i = 0; i < row; i++)
+	        for (int j = 0; j < column; j++)
 
+              return $"на позиции [{numi},{numj}] стоит число {arr[numi-1,numj-1]}";// если бы тут был consol,...то проверил все вхождения
+    return "Такого числа нет";   
     }
 
 	
@@ -42,9 +47,14 @@
 	int start = int.Parse(Console.ReadLine()!);
 	int stop = int.Parse(Console.ReadLine()!);
 	
+
 	int[,] mass = MassNums(row_num, column_num, start, stop);
-	Print(mass);
-    EvenPos(mass);
     Print(mass);
+    int vali = int.Parse(Console.ReadLine()!);
+	int valj = int.Parse(Console.ReadLine()!);
+
+    string result = SerchEl (mass, vali, valj);
+    Console.WriteLine(result);
+
 
 
