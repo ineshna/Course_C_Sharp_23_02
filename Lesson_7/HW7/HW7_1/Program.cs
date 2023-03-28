@@ -27,8 +27,11 @@ void Print(double[,] arr)
 	    return arr;
 	}
 	
+		Console.WriteLine("Введите число строк массива :");
 	int row_num = int.Parse(Console.ReadLine()!);
+	Console.WriteLine("Введите число столбцов массива :");
 	int column_num = int.Parse(Console.ReadLine()!);
+	Console.WriteLine("Введите диапазон массива :");
 	int start = int.Parse(Console.ReadLine()!);
 	int stop = int.Parse(Console.ReadLine()!);
 	
