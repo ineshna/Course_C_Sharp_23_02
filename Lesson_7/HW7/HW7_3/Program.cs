@@ -1,8 +1,6 @@
 ﻿// Задайте двумерный массив из целых чисел. 
 //Найдите среднее арифметическое элементов в каждом столбце.
-
-Console.WriteLine("Hello, World!");
-	void Print(int[,] arr)
+void Print(int[,] arr)
 	{
 	    int row = arr.GetLength(0);
 	    int column = arr.GetLength(1);
@@ -15,7 +13,7 @@ Console.WriteLine("Hello, World!");
 	    }
         Console.WriteLine();
 	}
-	
+
 	int[,] MassNums(int row, int column, int from, int to)
 	{
 	    int[,] arr = new int[row, column];
@@ -26,28 +24,42 @@ Console.WriteLine("Hello, World!");
 	    return arr;
 	}
 
-    int AverSum (int[,]arr)
+
+
+
+    string AvSum (int[,]arr)
     {
         int row = arr.GetLength(0);
 	    int column = arr.GetLength(1);
-
-        int sum = 0;
-
-        for (int i = 0; i < row; i++)
-	        for (int j = 0; j < column; j++)
-
-             if( i==j)
-                sum = sum +arr[i,j];
-        return sum;    
+        for(int j = 0; j < column; j++)
+        {
+          double avarsum = 0;
+            for (int i = 0; i < row; i++)
+            {
+                avarsum = (avarsum + arr[i, j]);
+            }
+            avarsum = avarsum / row;
+            Console.Write(avarsum + "; ");  
+        }
+		  
+	return "-cреднее арифметическое элементов в каждом столбце";
     }
 
-	
+
+
+
+	Console.WriteLine("Введите число строк массива :");
 	int row_num = int.Parse(Console.ReadLine()!);
+	Console.WriteLine("Введите число столбцов массива :");
 	int column_num = int.Parse(Console.ReadLine()!);
+	Console.WriteLine("Введите диапазон массива :");
 	int start = int.Parse(Console.ReadLine()!);
 	int stop = int.Parse(Console.ReadLine()!);
 	
+
 	int[,] mass = MassNums(row_num, column_num, start, stop);
-	Print(mass);
-    int result = EvenPos(mass);
+    Print(mass);
+	
+
+    string result = AvSum (mass);
     Console.WriteLine(result);
