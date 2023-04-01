@@ -29,24 +29,29 @@ int[,] MassNums(int row, int column, int from, int to)
     return arr;
 }
 
-int SumRow(int[,] arr)
+int[] SumRow(int[,] arr)
 {
     int row = arr.GetLength(0);
     int column = arr.GetLength(1);
-    int sum = 0;
 
+    int[] sums = new int [arr.GetLength(0)];
     for(int i = 0; i < row; i++)
     {
-        sum = 0;
-        for(int j = 0; j <column; j++)
+        for(int j = 0; j < column; j++)
         {
-            sum += arr[i, j];
+            sums[i] += arr[i, j];
         }
-        Console.WriteLine(sum);
     }
-    return sum;
+    return sums;
 }
-
+int MinInd(int[] arr)
+{
+    int minind = 0;
+    for(int i = 0; i < arr.Length; i++)
+        if (arr[i] < arr[minind])
+        minind = i;
+    return minind;
+}
 
 
 Console.WriteLine("Введите число строк массива :");
@@ -61,7 +66,10 @@ Console.WriteLine(" Начальный массив: ");
 
 int[,] mass = MassNums(row_num, column_num, start, stop);
 Print(mass);
-SumRow(mass);
+
+int[] sums = SumRow(mass);
+int numline = MinInd(sums);
+Console.WriteLine($"Строка с наименьшей суммой элементов - {numline+1}");
 
 
 

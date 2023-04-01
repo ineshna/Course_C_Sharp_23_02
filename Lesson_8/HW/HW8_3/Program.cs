@@ -43,8 +43,8 @@ void Multiply(int[,] arr1, int[,] arr2, int[,] arrend)
     int rowend = arrend.GetLength(0);
     int columnend = arrend.GetLength(1);
 
-    if (column1 != column2)
-    Console.WriteLine("Умножение матриц невозможно.Число столбцов 1й матрицы должно должно быть числу строк 2й матрицы");
+    if (column1 != column2 && row1 != row2 )
+    Console.WriteLine("Умножение матриц невозможно.Размеры матриц должны быть одинаковыми");
 
 
     for (int i = 0; i < rowend; i++)
