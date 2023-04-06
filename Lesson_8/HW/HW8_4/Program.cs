@@ -26,28 +26,6 @@ int[,] MassNums(int row, int column, int from, int to)
     return arr;
 }
 
-
-//int[,] MinEll(int[,] arr, int[,] index)
-//{
-//    int row = arr.GetLength(0);
-//    int column = arr.GetLength(1);
-//   int init = arr[0, 0];
-  
-//    for (int i = 0; i < row; i++)
-//    {
-//        for (int j = 0; j < column; j++)
-//        {
-//            if (arr[i, j] <= init)
-//            {
-//                index[0, 0] = i;
-//                index[0, 1] = j;
-//                init = arr[i, j];
-//            }
-//        }
-//    }
-//    Console.WriteLine($"Mинимальный элемент: {init}");
-//    return index;
-//}
 int[] FindMinEl(int[,] arr)
 {
     int minI = 0;
